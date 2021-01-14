@@ -1,5 +1,9 @@
 let connection;
 
+let specialMessage3 = "Say: i am best snekkkk";
+let specialMessage1 = "Say: turning into snekkk";
+let specialMessage2 = "Say: i am now a snekkk";
+
 let currentInterval;
 const handleUserInput = function(inputOfUser) {
   const interval = function(keyPressed) {
@@ -22,6 +26,15 @@ const handleUserInput = function(inputOfUser) {
   } else if (inputOfUser === 'd') {
     clearInterval(currentInterval);
     interval("Move: right");
+  } else if (inputOfUser === 'q') {
+    clearInterval(currentInterval);
+    connection.write(specialMessage1);
+  } else if (inputOfUser === 'e') {
+    clearInterval(currentInterval);
+    connection.write(specialMessage2);
+  } else if (inputOfUser === 'r') {
+    clearInterval(currentInterval);
+    connection.write(specialMessage3);
   }
 }
 
