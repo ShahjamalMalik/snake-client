@@ -5,9 +5,15 @@ const up = "Move: up";
 const down = "Move: down";
 const left = "Move: left";
 const right = "Move: right";
-const specialMessage3 = "Say: i am best snekkkk";
+/*const specialMessage3 = "Say: i am best snekkkk";
 const specialMessage1 = "Say: turning into snekkk";
-const specialMessage2 = "Say: i am now a snekkk";
+const specialMessage2 = "Say: i am now a snekkk";*/
+const specialMessageObj = {
+  specialMessage1: "Say: turning into snekkk",
+  specialMessage2: "Say: i am now a snekkk",
+  specialMessage3: "Say: i am best snekkkk"
+};
+
 
 
 module.exports = {
@@ -18,7 +24,5 @@ module.exports = {
   down,
   left,
   right,
-  specialMessage1,
-  specialMessage2,
-  specialMessage3
+  specialMessageObj
 };

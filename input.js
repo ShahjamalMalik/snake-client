@@ -1,5 +1,5 @@
 let connection;
-const { up, down, left, right, specialMessage1, specialMessage2, specialMessage3 } = require('./constants');
+const { up, down, left, right, specialMessageObj } = require('./constants');
 
 
 
@@ -27,13 +27,13 @@ const handleUserInput = function(inputOfUser) {
     interval(right);
   } else if (inputOfUser === 'q') {
     clearInterval(currentInterval);
-    connection.write(specialMessage1);
+    connection.write(specialMessageObj.specialMessage1);
   } else if (inputOfUser === 'e') {
     clearInterval(currentInterval);
-    connection.write(specialMessage2);
+    connection.write(specialMessageObj.specialMessage2);
   } else if (inputOfUser === 'r') {
     clearInterval(currentInterval);
-    connection.write(specialMessage3);
+    connection.write(specialMessageObj.specialMessage3);
   }
 }
 
