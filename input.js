@@ -1,8 +1,7 @@
 let connection;
+const { up, down, left, right, specialMessage1, specialMessage2, specialMessage3 } = require('./constants');
 
-let specialMessage3 = "Say: i am best snekkkk";
-let specialMessage1 = "Say: turning into snekkk";
-let specialMessage2 = "Say: i am now a snekkk";
+
 
 let currentInterval;
 const handleUserInput = function(inputOfUser) {
@@ -16,16 +15,16 @@ const handleUserInput = function(inputOfUser) {
     process.exit();
   } else if (inputOfUser === 'w') {
     clearInterval(currentInterval);
-    interval("Move: up");
+    interval(up);
   } else if (inputOfUser === 'a') {
     clearInterval(currentInterval);
-    interval("Move: left");
+    interval(left);
   } else if (inputOfUser === 's') {
     clearInterval(currentInterval);
-    interval("Move: down");
+    interval(down);
   } else if (inputOfUser === 'd') {
     clearInterval(currentInterval);
-    interval("Move: right");
+    interval(right);
   } else if (inputOfUser === 'q') {
     clearInterval(currentInterval);
     connection.write(specialMessage1);

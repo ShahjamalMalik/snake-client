@@ -1,12 +1,13 @@
 const net = require('net');
+const { port, host, encoding } = require('./constants');
 
 const connect = function() {
   const conn = net.createConnection({
-    host: 'localhost',
-    port: 50541
+    host: host,
+    port: port
   });
 
-  conn.setEncoding('utf8');
+  conn.setEncoding(encoding);
 
   
 
